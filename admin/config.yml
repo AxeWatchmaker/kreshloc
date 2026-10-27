@@ -9,7 +9,7 @@ collections:
   - name: "posts"
     label: "Blog Posts"
     files:
-      - name: "posts"
+      - name: "posts_data"
         label: "All Posts"
         file: "posts.json"
         fields:

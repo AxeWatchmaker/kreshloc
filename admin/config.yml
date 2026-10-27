@@ -17,3 +17,4 @@ collections:
           - { label: "Date", name: "date", widget: "datetime" }
           - { label: "Tags", name: "tags", widget: "list", default: ["chemistry"] }
           - { label: "Body", name: "body", widget: "text" }
+          

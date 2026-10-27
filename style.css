@@ -1,0 +1,214 @@
+:root {
+    --bg-main: #e8e4df;
+    --bg-panel: #f0ede9;
+    --bg-dark: #4a453f;
+    --text-main: #333333;
+    --text-light: #6b6259;
+    --accent: #8a7a6d;
+    --accent-hover: #6f6156;
+    --border: #b0a89f;
+    --shadow: #b0a89f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: Verdana, Tahoma, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    /* Легкая текстура «бумаги» из нулевых */
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.015) 2px,
+            rgba(0, 0, 0, 0.015) 4px
+        );
+}
+
+.site-header {
+    background-color: var(--bg-dark);
+    color: #e8e4df;
+    padding: 24px 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--accent);
+    box-shadow: 0 4px 0 var(--shadow);
+}
+
+.site-header h1 {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #2a2724;
+}
+
+.subtitle {
+    margin: 8px 0 0;
+    font-size: 13px;
+    color: #c9c1b8;
+    letter-spacing: 0.5px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 16px 20px;
+    background-color: var(--bg-panel);
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.filter-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid;
+    border-color: #ffffff var(--border) var(--border) #ffffff;
+    box-shadow: 2px 2px 0 var(--shadow);
+    transition: background-color 0.15s, box-shadow 0.1s;
+}
+
+.filter-tag:hover {
+    background-color: #ddd8d2;
+}
+
+.filter-tag.active {
+    background-color: var(--accent);
+    color: #fff;
+    border-color: var(--border) #ffffff #ffffff var(--border);
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+}
+
+.loading {
+    text-align: center;
+    color: var(--text-light);
+    font-style: italic;
+    padding: 40px 0;
+}
+
+.post {
+    background-color: var(--bg-panel);
+    border: 2px solid var(--border);
+    padding: 18px 22px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 0 var(--shadow);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.post:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--shadow);
+}
+
+.post h2 {
+    margin: 0 0 8px;
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    color: var(--bg-dark);
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 6px;
+}
+
+.post-date {
+    font-size: 11px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.post-body {
+    font-size: 14px;
+    color: var(--text-main);
+    white-space: pre-line;
+}
+
+.post-tags {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.post-tags .tag {
+    font-size: 11px;
+    color: var(--accent);
+    background-color: #e0dbd5;
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+.post-tags .tag:hover {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-light);
+    font-style: italic;
+    border: 2px dashed var(--border);
+}
+
+.site-footer {
+    background-color: var(--bg-dark);
+    color: #c9c1b8;
+    text-align: center;
+    padding: 16px 20px;
+    font-size: 11px;
+    border-top: 4px solid var(--accent);
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .site-header h1 {
+        font-size: 20px;
+    }
+
+    .filters {
+        padding: 12px 10px;
+    }
+
+    .filter-tag {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .content {
+        padding: 16px 10px 30px;
+    }
+
+    .post {
+        padding: 14px 16px;
+    }
+}

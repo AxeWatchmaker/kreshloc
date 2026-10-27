@@ -1,0 +1,20 @@
+[
+    {
+        "title": "The Chemistry of Tobacco Ash",
+        "date": "2026-10-20",
+        "tags": ["chemistry", "ash", "tobacco"],
+        "body": "Tobacco ash is not just a grey mass. It retains metal oxides, carbonates, and trace amounts of organic compounds. Interestingly, the ash composition depends heavily on combustion temperature and tobacco variety.\n\nI plan to dig into this in more detail later."
+    },
+    {
+        "title": "Physics in Engineering: Bridges",
+        "date": "2026-10-15",
+        "tags": ["physics", "engineering"],
+        "body": "When you look at a bridge, you rarely think about load distribution. Yet every span is a compromise between strength, weight, and cost. The laws of statics, strength of materials, and a bit of thermodynamics are all at work here."
+    },
+    {
+        "title": "Where Sciences Meet: Physical Chemistry",
+        "date": "2026-10-10",
+        "tags": ["chemistry", "physics"],
+        "body": "Physical chemistry is where the equations of physics explain the behaviour of molecules. Reaction rates, activation energy, entropy — all of it lives on the border between two disciplines."
+    }
+]
